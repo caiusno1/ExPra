@@ -1,2 +1,2 @@
 # ExPra
-Repository für das Experimentalpsychologische Praktikum
+Repository für das experimentalpsychologische Praktikum
