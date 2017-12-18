@@ -9,22 +9,46 @@ bool UFileHelpers4Blueprinting::FileSaveString(FString SaveTextB, FString FileNa
 bool UFileHelpers4Blueprinting::FileSaveTestResult(const TArray<float>& testsoa, const TArray<float>& timeUntilColorChanged ,const TArray<bool>& correct, FString identifier)
 {
 	FString JoinedStr;
+	bool first = true;
 	for (auto& soa : testsoa)
 	{
+		if (first)
+		{
+			first = false;
+		}
+		else
+		{
+			JoinedStr += TEXT(" ");
+		}
 		JoinedStr += FString::SanitizeFloat(soa);
-		JoinedStr += TEXT(" ");
 	}
+	first = true;
 	JoinedStr += TEXT("\n");
 	for (auto& res : correct)
 	{
+		if (first)
+		{
+			first = false;
+		}
+		else
+		{
+			JoinedStr += TEXT(" ");
+		}
 		JoinedStr += FString::Printf(TEXT("%d"), res);
-		JoinedStr += TEXT(" ");
 	}
+	first = true;
 	JoinedStr += TEXT("\n");
 	for (auto& colch : timeUntilColorChanged)
 	{
+		if (first)
+		{
+			first = false;
+		}
+		else
+		{
+			JoinedStr += TEXT(" ");
+		}
 		JoinedStr += FString::SanitizeFloat(colch);
-		JoinedStr += TEXT(" ");
 	}
 	return FFileHelper::SaveStringToFile(JoinedStr, *(FPaths::GameDir() + identifier+"_testdata.csv"));
 }
