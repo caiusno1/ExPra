@@ -21,9 +21,13 @@ for file in result:
             #transpose
             for row in testdatareader:
                 j=0
+                first=True
                 for item in row:
-                    Matrix[j][i]=item
-                    j+=1
+                    if first:
+                        first=False
+                    else:
+                        Matrix[j][i]=item
+                        j+=1
                 i+=1
             #encode and count
             for row in Matrix:
