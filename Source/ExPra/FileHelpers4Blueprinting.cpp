@@ -15,6 +15,7 @@ bool UFileHelpers4Blueprinting::FileSaveTestResult(const TArray<float>& testsoa,
 		if (first)
 		{
 			first = false;
+			JoinedStr += TEXT("Soa ");
 		}
 		else
 		{
@@ -29,6 +30,7 @@ bool UFileHelpers4Blueprinting::FileSaveTestResult(const TArray<float>& testsoa,
 		if (first)
 		{
 			first = false;
+			JoinedStr += TEXT("CorrectBoxChoosen ");
 		}
 		else
 		{
@@ -43,6 +45,7 @@ bool UFileHelpers4Blueprinting::FileSaveTestResult(const TArray<float>& testsoa,
 		if (first)
 		{
 			first = false;
+			JoinedStr += TEXT("TimeBoxcolorIsVisible ");
 		}
 		else
 		{
