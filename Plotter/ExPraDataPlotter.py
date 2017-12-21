@@ -9,10 +9,10 @@ PlotArrayNotEyeCatching = [[0 for x in range(301)] for y in range(4)]
 #files
 result = [i for i in glob.glob('*.{}'.format("csv"))]
 #experimental Var-Params
-experimentalVar=[0.2];
+experimentalVar=[0.05,0.1,0.15,0.2];
 for file in result:
     valindex=0
-    w, h = 3, 17;
+    w, h = 3, 128;
     Matrix = [[0 for x in range(w)] for y in range(h)] 
     for val in experimentalVar:
         with open(file, 'r') as csvfile:
