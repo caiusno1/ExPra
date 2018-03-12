@@ -43,8 +43,8 @@
 
 \usepackage{caption}
 \captionsetup{
-  font=small,% set font size to footnotesize
-  labelfont=bf % bold label (e.g., Figure 3.2) font
+	font=small,% set font size to footnotesize
+	labelfont=bf % bold label (e.g., Figure 3.2) font
 }
 % Make the standard latex tables look so much better
 \usepackage{array,booktabs}
@@ -88,11 +88,11 @@
 \usepackage{enumitem}
 %configure itemize
 \setlist{%
-  topsep=0pt,% set space before and after list
-  noitemsep,% remove space between items
-  labelindent=\parindent,% set the label indentation to the paragraph indentation
-  leftmargin=*,% remove the left margin
-  font=\color{aaublue1}\normalfont, %set the colour of all bullets, numbers and descriptions to aaublue1
+	topsep=0pt,% set space before and after list
+	noitemsep,% remove space between items
+	labelindent=\parindent,% set the label indentation to the paragraph indentation
+	leftmargin=*,% remove the left margin
+	font=\color{aaublue1}\normalfont, %set the colour of all bullets, numbers and descriptions to aaublue1
 }
 % use set<itemize,enumerate,description> if you have an older latex distribution
 \setitemize[1]{label={\raise1.25pt\hbox{$\blacktriangleright$}}}
@@ -106,10 +106,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % change/remove some names
 \addto{\captionsenglish}{
-  %remove the title of the bibliograhpy
-  \renewcommand{\refname}{\vspace{-0.7em}}
-  %change Figure to Fig. in figure captions
-  \renewcommand{\figurename}{Fig.}
+	%remove the title of the bibliograhpy
+	\renewcommand{\refname}{\vspace{-0.7em}}
+	%change Figure to Fig. in figure captions
+	\renewcommand{\figurename}{Fig.}
 }
 % create links
 \usepackage{url}
@@ -125,162 +125,162 @@
 % Document Start 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Some changes that cannot be made in the preamble
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% set the background of the poster
-\background{
-  \begin{tikzpicture}[remember picture,overlay]%
-    %the poster background color
-    \fill[fill=aaublue3] (current page.north west) rectangle (current page.south east);
-    %the header
-    \fill [fill=aaublue1](current page.north west) rectangle ([yshift=-\headerheight] current page.north east); 
-    %\shade[left color=red!80, right color=blue]
-    
-  \end{tikzpicture}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% General poster setup
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{poster}{
-  %general options for the poster
-  grid=false,
-  columns=3,
-%  colspacing=4.2mm,
-  headerheight=0.1\textheight,
-  background=user,
-%  bgColorOne=red!42, %is used when background != user and none
-%  bgColortwo=green!42, %is used when background is shaded
-  eyecatcher=true,
-  %posterbox options
-  headerborder=closed,
-  borderColor=aaublue1,
-  headershape=rectangle,
-  headershade=plain, %shade-lr
-  headerColorOne=aaublue1,
-%  headerColorTwo=yellow!42, %is used when the header background is shaded
-  textborder=rectangle,
-  boxshade=plain,
-  boxColorOne=white,
-%  boxColorTwo=cyan!42,%is used when the text background is shaded
-  headerFontColor=white,
-  headerfont=\Large\sf\bf,
-  linewidth=1pt
-}
-%the Eye Catcher (the logo on the left)
-{
- \vspace*{-1cm} \includegraphics[height=.9\headerheight]{UPB_Logo_WEISS_12_libellen2.pdf}
-}
-%the poster title
-{\color{white}\bf\smaller
-  Sphere in a Box: \\ 
-  Psychophysical experiments in \\ reality close context
-}
-%the author(s)
-{\color{white}\small
-\vspace*{-0.2cm}
-  \vspace{1em}Kai Biermeier, Robin Nagel, Dennis Meier, Philip Schonlau\\
-  {\smaller kaibm@mail.upb.de, rnagel@mail.upb.de, , jps96@mail.upb.de}
-  
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% the actual content of the poster begins here
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{posterbox}[name=intro,span=2,column=0,row=0]{Introduction}
-\begin{tabular}{p{0.63\textwidth} p{0.3\textwidth}}
-    Psychophysical experiments are designed to provide highly precise parameter estimations. Thus, numerous highly controlled trials are needed in an isolated enviroment. But due to this setting we lose realism, because in nativ environment we always have many confounding variables and a more complex visual stimulus.
-    So our approach to get more reality close results is to embedd the experiment in a game-engine created  	surrounding with Unreal4.
-    & 
-    \vspace{-8pt}
-    \includegraphics[width=0.32\textwidth]{race2.png}\\
-\end{tabular}
-
-\end{posterbox}
-
-\begin{posterbox}[name=theory,column=0,row=1,below=intro]{Theory}
-Visual attention is a complex process. Many stimuli compete for attention resources . Due to limited capacity misjudgments can occur. The experiment focuses on these misjudgments in which we expect one stimuli to get an advantage over the others through a visual contrast. According to Krüger et al. (2016) Bundesen's (1998) theory of visual attention can be applied to temporal-order judgments. Therefore we measure in the experiment associated game the attentional weight w and C the overall processing rate. 
-\end{posterbox}
-
-\begin{posterbox}[name=game,span=1,column=1,row=1,below=intro]{Game}
-\begin{itemize}
-\item Dragonfly race through a pipe.
-\end{itemize}
-\includegraphics[width=1\textwidth]{game.jpg}
-\begin{itemize}
-\item Multiple grates obstruct the pipe.
-\end{itemize}
-\includegraphics[width=1 \textwidth]{grate.jpg}
-\begin{itemize}
-\item Flying through two special openings provides bonuses.
-\end{itemize}
-\begin{itemize}
-\item Discriminating their flicker correctly in time and flying through them accordingly increases bonus.
-\end{itemize}
-\end{posterbox}
-
-\begin{posterbox}[name=procedure,span=2,column=0,row=2, below=game]{Procedure (game and classical experiment)}
-\begin{center}
-\includegraphics[width=0.85\textwidth]{procedurev2.pdf}
-\end{center}
-\end{posterbox}
-
-\begin{posterbox}[name=results,span=1,column=2,row=0]{Analysis}
-\begin{itemize}
-\item Theory-based TVA parameters and data were connected by a Bayesian hierarchical model.
-\end{itemize}
-	\begin{center}
-	\includegraphics[width=0.5\textwidth]{graphmod.pdf}
-	\end{center}
-\begin{itemize}
-\item Repetitions of trials per participant vary because of the freedom in the game -- difficult to model with classical statistics.
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=0.48\textwidth]{unclear.jpg}
-\includegraphics[width=0.48\textwidth]{unclear2.jpg}
-\end{center}
-
-\begin{itemize}
-\item psychophysical parameter estimation: game (19 participants, ongoing)
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=0.48\textwidth]{game-w-hdi.pdf}
-\includegraphics[width=0.48\textwidth]{game-c-hdi.pdf}
-\end{center}
-
-\begin{itemize}
-\item psychophysical parameter estimation: classical experiment (13 participants, ongoing)
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=0.48\textwidth]{exp-w-hdi-rs.pdf}
-\includegraphics[width=0.48\textwidth]{exp-c-hdi-rs.pdf}
-\end{center}
-
-\end{posterbox}
-
-\begin{posterbox}[name=conclusion,span=1,column=2,row=2,below=results]{Conclusion}
-The results from the game and the classical experiment are similar: The salient probe stimulus receives an increased attentional weight in contrast to the reference stimulus. Importantly, estimation accuracy was comparable.
-
-Quantitatively, there is a difference: In the game, the probe stimulus receives less attention and the overall visual processing capacity is reduced that may be caused by the necessity to visually monitor the position of the dragonfly. This requires capacity and attention to be distributed among three instead of two positions.
-
-We conclude that the gaming approach is viable in general and that Bayesian data analysis allows for precise estimation despite the freedom in games.
-\end{posterbox}
-
-\begin{posterbox}[name=refs,column=0,span=3,below=procedure,above=bottom]{References}
-\footnotesize
-\linespread{1}
-
-{\color{upbblue}Bundesen, C. } ({\color{upbblue}1998}). A computational theory of visual attention. \textit{Philosophical Transactions of the Royal Society of London B: Biological Sciences, 353, 1271-1281.}, doi: 10.1098/rstb.1998.0282 
-
-{\color{upbblue}Krüger, A., Tünnermann, J., \& Scharlau, I.} ({\color{upbblue}2016}). Fast and conspicuous? Quantifying salience with the theory of visual attention \textit{Advances in Cognitive Psychology, 12(1), 20}, doi: 10.5709/acp-0184-1 
-\vspace{0.115cm}
-\end{posterbox}
-
-\end{poster}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Some changes that cannot be made in the preamble
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% set the background of the poster
+	\background{
+		\begin{tikzpicture}[remember picture,overlay]%
+		%the poster background color
+		\fill[fill=aaublue3] (current page.north west) rectangle (current page.south east);
+		%the header
+		\fill [fill=aaublue1](current page.north west) rectangle ([yshift=-\headerheight] current page.north east); 
+		%\shade[left color=red!80, right color=blue]
+		
+		\end{tikzpicture}
+	}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% General poster setup
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{poster}{
+			%general options for the poster
+			grid=false,
+			columns=3,
+			%  colspacing=4.2mm,
+			headerheight=0.1\textheight,
+			background=user,
+			%  bgColorOne=red!42, %is used when background != user and none
+			%  bgColortwo=green!42, %is used when background is shaded
+			eyecatcher=true,
+			%posterbox options
+			headerborder=closed,
+			borderColor=aaublue1,
+			headershape=rectangle,
+			headershade=plain, %shade-lr
+			headerColorOne=aaublue1,
+			%  headerColorTwo=yellow!42, %is used when the header background is shaded
+			textborder=rectangle,
+			boxshade=plain,
+			boxColorOne=white,
+			%  boxColorTwo=cyan!42,%is used when the text background is shaded
+			headerFontColor=white,
+			headerfont=\Large\sf\bf,
+			linewidth=1pt
+		}
+		%the Eye Catcher (the logo on the left)
+		{
+			\vspace*{-1cm} \includegraphics[height=.9\headerheight]{UPB_Logo_WEISS_12_libellen2.pdf}
+		}
+		%the poster title
+		{\color{white}\bf\smaller
+			Sphere in a Box: \\ 
+			Psychophysical experiments in \\ reality close context
+		}
+		%the author(s)
+		{\color{white}\small
+			\vspace*{-0.2cm}
+			\vspace{1em}Kai Biermeier, Robin Nagel, Dennis Meier, Philip Schonlau\\
+			{\smaller kaibm@mail.upb.de, rnagel@mail.upb.de, , jps96@mail.upb.de}
+			
+		}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% the actual content of the poster begins here
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\begin{posterbox}[name=intro,span=2,column=0,row=0]{Introduction}
+			\begin{tabular}{p{0.63\textwidth} p{0.3\textwidth}}
+				Psychophysical experiments are designed to provide highly precise parameter estimations. Thus, numerous highly controlled trials are needed in an isolated environment. But due to this isolation the experiment is not completely applicable to reality, because in a native environment there are many confounding variables and a more complex visual stimulus.
+				So our approach to get more reality close results is to embed the experiment in a game-engine created surrounding with Unreal4.
+				& 
+				\vspace{-8pt}
+				\includegraphics[width=0.32\textwidth]{race2.png}\\
+			\end{tabular}
+			
+		\end{posterbox}
+		
+		\begin{posterbox}[name=theory,column=0,row=1,below=intro]{Theory}
+			Visual attention is a complex process. Many stimuli compete for attention resources . Due to limited capacity misjudgments can occur. The experiment focuses on these misjudgments in which we expect one stimuli to get an advantage over the others through a visual contrast. According to Krüger et al. (2016) Bundesen's (1998) theory of visual attention can be applied to temporal-order judgments. Therefore we measure in the experiment associated game the attentional weight w and C the overall processing rate. 
+		\end{posterbox}
+		
+		\begin{posterbox}[name=game,span=1,column=1,row=1,below=intro]{Game}
+			\begin{itemize}
+				\item Multiple boxes are shown on screen.
+			\end{itemize}
+			\includegraphics[width=1\textwidth]{game.jpg}
+			\begin{itemize}
+				\item Each turn two boxes get selected, one on the left and one on the right. One of them gets a contrast in color.
+			\end{itemize}
+			\includegraphics[width=1 \textwidth]{grate.jpg}
+			\begin{itemize}
+				\item The selected boxes blink with changing time offsets
+			\end{itemize}
+			\begin{itemize}
+				\item The Player has determine which side blinked first, choosing his side with the arrow keys.
+			\end{itemize}
+		\end{posterbox}
+		
+		\begin{posterbox}[name=procedure,span=2,column=0,row=2, below=game]{Procedure (game and classical experiment)}
+			\begin{center}
+				\includegraphics[width=0.85\textwidth]{procedurev2.pdf}
+			\end{center}
+		\end{posterbox}
+		
+		\begin{posterbox}[name=results,span=1,column=2,row=0]{Analysis}
+			\begin{itemize}
+				\item Theory-based TVA parameters and data were connected by a Bayesian hierarchical model.
+			\end{itemize}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{graphmod.pdf}
+			\end{center}
+			\begin{itemize}
+				\item Repetitions of trials per participant vary because of the freedom in the game -- difficult to model with classical statistics.
+			\end{itemize}
+			
+			\begin{center}
+				\includegraphics[width=0.48\textwidth]{unclear.jpg}
+				\includegraphics[width=0.48\textwidth]{unclear2.jpg}
+			\end{center}
+			
+			\begin{itemize}
+				\item psychophysical parameter estimation: game (19 participants, ongoing)
+			\end{itemize}
+			
+			\begin{center}
+				\includegraphics[width=0.48\textwidth]{game-w-hdi.pdf}
+				\includegraphics[width=0.48\textwidth]{game-c-hdi.pdf}
+			\end{center}
+			
+			\begin{itemize}
+				\item psychophysical parameter estimation: classical experiment (13 participants, ongoing)
+			\end{itemize}
+			
+			\begin{center}
+				\includegraphics[width=0.48\textwidth]{exp-w-hdi-rs.pdf}
+				\includegraphics[width=0.48\textwidth]{exp-c-hdi-rs.pdf}
+			\end{center}
+			
+		\end{posterbox}
+		
+		\begin{posterbox}[name=conclusion,span=1,column=2,row=2,below=results]{Conclusion}
+			The results from the game and the classical experiment are similar: The salient probe stimulus receives an increased attentional weight in contrast to the reference stimulus. Importantly, estimation accuracy was comparable.
+			
+			Quantitatively, there is a difference: In the game, the probe stimulus receives less attention and the overall visual processing capacity is reduced that may be caused by the necessity to visually monitor the position of the dragonfly. This requires capacity and attention to be distributed among three instead of two positions.
+			
+			We conclude that the gaming approach is viable in general and that Bayesian data analysis allows for precise estimation despite the freedom in games.
+		\end{posterbox}
+		
+		\begin{posterbox}[name=refs,column=0,span=3,below=procedure,above=bottom]{References}
+			\footnotesize
+			\linespread{1}
+			
+			{\color{upbblue}Bundesen, C. } ({\color{upbblue}1998}). A computational theory of visual attention. \textit{Philosophical Transactions of the Royal Society of London B: Biological Sciences, 353, 1271-1281.}, doi: 10.1098/rstb.1998.0282 
+			
+			{\color{upbblue}Krüger, A., Tünnermann, J., \& Scharlau, I.} ({\color{upbblue}2016}). Fast and conspicuous? Quantifying salience with the theory of visual attention \textit{Advances in Cognitive Psychology, 12(1), 20}, doi: 10.5709/acp-0184-1 
+			\vspace{0.115cm}
+		\end{posterbox}
+		
+	\end{poster}
 \end{document}
