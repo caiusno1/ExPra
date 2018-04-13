@@ -195,14 +195,18 @@
 				Psychophysical experiments are designed to provide highly precise parameter estimations. Thus, numerous highly controlled trials are needed in an isolated environment. But due to this isolation the experiment is not completely applicable to reality, because in a native environment there are many confounding variables and a more complex visual stimulus.
 				So our approach to get more reality close results is to embed the experiment in a game-engine created surrounding with Unreal4.
 				& 
-				\vspace{-8pt}
-				\includegraphics[width=0.32\textwidth]{race2.png}\\
+				\vspace{-5pt}
+				\includegraphics[width=0.32\textwidth]{Screenshots/playerDecision.png}\\
 			\end{tabular}
 			
 		\end{posterbox}
 		
 		\begin{posterbox}[name=theory,column=0,row=1,below=intro]{Theory}
-			Visual attention is a complex process. Many stimuli compete for attention resources . Due to limited capacity misjudgments can occur. The experiment focuses on these misjudgments in which we expect one stimuli to get an advantage over the others through a visual contrast. We refer here to Wolfe, J. M., \& Horowitz, T. S. (2004), who show that it is highly propabal that color is important for attention. We also obtain to Donk und Soesmann (2011). They show that time is an important variable in order to create effective saliet stimulie especially also in temporal-order-judgement-experiments. To combine time and color predictions we point to Dombrowe, Olivers und Donk (2010). According to Krüger et al. (2016) Bundesen's (1998) theory of visual attention can be applied to temporal-order judgments. Therefore we measure in the experiment associated game the attentional weight w and C the overall processing rate to analyze the relation of time, color and salienz in reality close context. 
+			\vspace{10pt}
+			Visual attention is a complex process. Many stimuli compete for attention resources . Due to limited capacity misjudgments can occur.\\ The experiment focuses on these misjudgments in which we expect one stimuli to get an advantage over the others through a visual contrast. We refer here to Wolfe, J. M., \& Horowitz, T. S. (2004), who show that it is highly propabal that color is important for attention.\\
+			 We also obtain to Donk und Soesmann (2011). They show that time is an important variable in order to create effective saliet stimulie especially also in temporal-order-judgement-experiments. To combine time and color predictions we point to Dombrowe, Olivers und Donk (2010).\\ According to Krüger et al. (2016) Bundesen's (1998) theory of visual attention can be applied to temporal-order judgments. Therefore we measure in the experiment associated game the attentional weight w and C the overall processing rate to analyze the relation of time, color and salienz in reality close context.\\
+			 We expect the impact of 50 and 400 ms to be lower than the impact of 100ms and 400ms delay, because the to short or to long distance to the stimulus.
+			 \vspace{18pt}
 		\end{posterbox}
 		
 		\begin{posterbox}[name=game,span=1,column=1,row=1,below=intro]{Game}
@@ -229,46 +233,30 @@
 		
 		\begin{posterbox}[name=results,span=1,column=2,row=0]{Analysis}
 			\begin{itemize}
-				\item Theory-based TVA parameters and data were connected by a Bayesian hierarchical model.
+				\item The following diagram shows the results of our experiment in a graphical way, by setting the propability to select the first stimulus in relation to the SOA under different delay-parameters. (11 participants)
 			\end{itemize}
 			\begin{center}
-				\includegraphics[width=0.5\textwidth]{graphmod.pdf}
+				\includegraphics[width=\textwidth]{imgs/complete_data.png}
 			\end{center}
 			\begin{itemize}
-				\item Repetitions of trials per participant vary because of the freedom in the game -- difficult to model with classical statistics.
+				\item Especially at the SOA of 0ms the difference between the delays is most prominent. 400ms sets itself apart the most.
 			\end{itemize}
 			
 			\begin{center}
-				\includegraphics[width=0.48\textwidth]{unclear.jpg}
-				\includegraphics[width=0.48\textwidth]{unclear2.jpg}
-			\end{center}
-			
-			\begin{itemize}
-				\item psychophysical parameter estimation: game (19 participants, ongoing)
-			\end{itemize}
-			
-			\begin{center}
-				\includegraphics[width=0.48\textwidth]{game-w-hdi.pdf}
-				\includegraphics[width=0.48\textwidth]{game-c-hdi.pdf}
+				\includegraphics[width=0.7\textwidth]{imgs/data_extract1.png}
 			\end{center}
 			
 			\begin{itemize}
-				\item psychophysical parameter estimation: classical experiment (13 participants, ongoing)
+				\item Moreover at SOA 0ms it is clearly visible that time has an effect in our experiment, because the turning-point of the curves are greater than 50 \%
 			\end{itemize}
-			
-			\begin{center}
-				\includegraphics[width=0.48\textwidth]{exp-w-hdi-rs.pdf}
-				\includegraphics[width=0.48\textwidth]{exp-c-hdi-rs.pdf}
-			\end{center}
 			
 		\end{posterbox}
 		
 		\begin{posterbox}[name=conclusion,span=1,column=2,row=2,below=results]{Conclusion}
-			The results from the game and the classical experiment are similar: The salient probe stimulus receives an increased attentional weight in contrast to the reference stimulus. Importantly, estimation accuracy was comparable.
-			
-			Quantitatively, there is a difference: In the game, the probe stimulus receives less attention and the overall visual processing capacity is reduced that may be caused by the necessity to visually monitor the position of the dragonfly. This requires capacity and attention to be distributed among three instead of two positions.
-			
-			We conclude that the gaming approach is viable in general and that Bayesian data analysis allows for precise estimation despite the freedom in games.
+			From the results of our experiment, we can derive an effect of time in an temporal order judgement with an colour stimulus.\\
+			As expected the time-difference of 400 ms is too large to have a significant impact on the temporal order judgment. On the contrary the delay of 50 ms had a higher impact than expected. Furthermore the delays of 50, 100 and 200 ms only have a small margin of difference even though they have a large impact on the selection of the first stimulus.\\
+			To sum up our expectations have been mostly met, but in future work the optimal delay, which seems to be close to 100 ms deducting from our results, should be determined in another experiment .
+			\vspace{18pt}
 		\end{posterbox}
 		
 		\begin{posterbox}[name=refs,column=0,span=2,below=procedure,above=bottom]{References}
@@ -284,7 +272,6 @@
 			{\color{upbblue}Donk, M., \& Soesman, L. (2011)} Object salience is transiently represented whereas object presence is not: Evidence from temporal order judgment. Perception, 40(1), 63 – 73. https://doi.org/10.1068/p6718 <https://doi.org/10.1068/p6718>
 			\\\\
 			{\color{upbblue}Wolfe, J. M., \& Horowitz, T. S. (2004)} What attributes guide the deployment of visual attention and how do they do it? Nature Reviews Neuroscience, 5(6), 495–501. https://doi.org/10.1038/nrn1411<https://doi.org/10.1038/nrn1411>
-			\vspace{0.115cm}
 		\end{posterbox}
 		
 	\end{poster}
